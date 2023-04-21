@@ -66,11 +66,11 @@ function cancel(options) {
 function ongetResult() {
     let info = JSON.parse(content);
     let status = info.status;
+    Bot.sendMessage(info);
+    return info;
     if (status == "error") {
         throw "SchedulerApi Lib: " + info.message;
     }
-    Bot.sendMessage(info);
-    return info;
 }
 
 on(libPrefix + 'ongetResult', ongetResult);
