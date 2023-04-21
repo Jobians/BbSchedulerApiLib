@@ -69,6 +69,7 @@ function ongetResult() {
     if (status == "error") {
         throw "SchedulerApi Lib: " + info.message;
     }
+    Bot.sendMessage(info);
     return info;
 }
 
