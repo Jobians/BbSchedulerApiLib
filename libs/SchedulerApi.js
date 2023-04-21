@@ -73,7 +73,7 @@ function ongetResult(content) {
     if (status == "error") {
         throw "SchedulerApi Lib: " + info.message;
     }
-    return info;
+    return content;
 }
 
 on(libPrefix + 'ongetResult', ongetResult);
