@@ -54,7 +54,7 @@ function ongetResult() {
     if (status == "error") {
         throw "SchedulerApi Lib: " + info.message;
     } else {
-        return info;
+        return "Result: " + info;
     }
 }
 
