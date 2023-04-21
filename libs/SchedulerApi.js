@@ -56,7 +56,7 @@ function cancel(options) {
     }
     var data = {
         bot_token: bot.token,
-        cancel: true,
+        cancel: 'true',
         id: options.id,
         label: options.label
     }
