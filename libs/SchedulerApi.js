@@ -4,7 +4,7 @@
 // Doc: https://api.jobians.top/runafter.php
 
 
-let libPrefix = "SchedulerApi"
+let libPrefix = "SchedulerApi";
 let API_URL = "https://api.jobians.top/runafter.php";
 
 function sendNoLibMessage(libName) {
@@ -42,7 +42,7 @@ function create(options) {
     }
     HTTP.post({
         url: API_URL,
-        success: libPrefix + 'ongetResult'
+        success: libPrefix + 'ongetResult',
         body: data,
         headers: headers
     })
@@ -52,7 +52,7 @@ function ongetResult() {
     let info = JSON.parse(content)
     let status = info.status;
     if (status == "error") {
-        throw "SchedulerApi Lib: "+ info.message +""
+        throw "SchedulerApi Lib: " + info.message;
     } else {
         return info;
     }
