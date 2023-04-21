@@ -64,14 +64,7 @@ function cancel(options) {
 }
 
 function ongetResult(content) {
-    let info = JSON.parse(content);
-    let status = info.status;
-    if (status == "error") {
-        throw "SchedulerApi Lib: " + info.message;
-    }
-    if (status == "ok") {
-        return info.id;
-    }
+    return content;
 }
 
 on(libPrefix + 'ongetResult', ongetResult);
